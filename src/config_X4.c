@@ -49,18 +49,18 @@ void x4_set_usersettings()
     }
     
     // flight modes, see checkboxes.h for a complete list
-    usersettings.checkboxconfiguration[CHECKBOXARM] = CHECKBOXMASKAUX1LOW;
-    usersettings.checkboxconfiguration[CHECKBOXYAWHOLD] = CHECKBOXMASKAUX2LOW;
+  //  usersettings.checkboxconfiguration[CHECKBOXARM] = CHECKBOXMASKAUX1LOW;
+  //  usersettings.checkboxconfiguration[CHECKBOXYAWHOLD] = CHECKBOXMASKAUX2LOW;
     
     // set fullacro flight mode (gyro only) for  AUX1 high (LEDs on/off channel on stock TX)
     // default for H107L, H107C & H107D stock TXs
-    //usersettings.checkboxconfiguration[CHECKBOXFULLACRO] = CHECKBOXMASKAUX1HIGH; // rate mode (gyro only)
-    //usersettings.checkboxconfiguration[CHECKBOXHIGHRATES] = CHECKBOXMASKAUX1HIGH; // uncommentr for high rates
+//    usersettings.checkboxconfiguration[CHECKBOXFULLACRO] = CHECKBOXMASKAUX1LOW; // rate mode (gyro only)
+  //  usersettings.checkboxconfiguration[CHECKBOXHIGHRATES] = CHECKBOXMASKAUX1HIGH; // uncommentr for high rates
     
     // set semiacro flight mode for AUX1 low
     // default for H107 stock TX 
-    //usersettings.checkboxconfiguration[CHECKBOXSEMIACRO] = CHECKBOXMASKAUX1LOW;
-    //usersettings.checkboxconfiguration[CHECKBOXHIGHANGLE] = CHECKBOXMASKAUX1LOW; // uncomment for high angle
+    usersettings.checkboxconfiguration[CHECKBOXSEMIACRO] = CHECKBOXMASKAUX1LOW;
+    usersettings.checkboxconfiguration[CHECKBOXHIGHANGLE] = CHECKBOXMASKAUX1LOW; // uncomment for high angle
 }
 
 void x4_init_leds()
@@ -70,7 +70,7 @@ void x4_init_leds()
     lib_digitalio_initpin(LED5_OUTPUT, DIGITALOUTPUT);
     lib_digitalio_initpin(LED6_OUTPUT, DIGITALOUTPUT);
 }
-
+ 
 void x4_set_leds(unsigned char state)
 {
     lib_digitalio_setoutput( LED1_OUTPUT , (state & 0x01) ? LED1_ON : !LED1_ON);

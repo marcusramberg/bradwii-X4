@@ -155,7 +155,7 @@ int main(void)
     // try to load usersettings from eeprom
     readusersettingsfromeeprom();
 
-    // set our LED as a digital output
+// set our LED as a digital output
     lib_digitalio_initpin(LED1_OUTPUT, DIGITALOUTPUT);
 
     //initialize the libraries that require initialization
@@ -178,6 +178,7 @@ int main(void)
             lib_timers_delaymilliseconds(500);
         }
     }
+
 #endif
 	
     // pause a moment before initializing everything. To make sure everything is powered up

@@ -24,7 +24,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // set control board dependant defines here
 #if CONTROL_BOARD_TYPE == CONTROL_BOARD_HUBSAN_H107L
 
-#define GYRO_TYPE MPU3050       // gyro
+//#define GYRO_TYPE MPU3050       // gyro
 
 #define GYRO_ORIENTATION(VALUES,X, Y, Z) {VALUES[ROLLINDEX] =  -Y; VALUES[PITCHINDEX] = X; VALUES[YAWINDEX] = -Z;}
 

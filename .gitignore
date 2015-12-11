@@ -6,6 +6,8 @@ obj-Mini51/
 *.bak
 *.map
 *.lst
+*.d
+*.o
 /Debug
 .settings/
-
+bradwii-x4-gcc
